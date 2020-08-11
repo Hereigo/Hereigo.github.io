@@ -1,21 +1,213 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<META http-equiv=Content-Type content="text/html; charset=UTF-8">
-<title>+TEST+</title>
-<style type="text/css">
-span {
-	font-family: 'Courier New';
-	font-size: 12pt;
-	color: #000000;
-}
-.sc0 {
-}
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Квартплата</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		.row-header {
+			margin-bottom: 1em;
+		}
+
+		.table-header-content {
+			bottom: 0;
+			margin-left: .2em;
+			font-weight: 600;
+		}
+
+		.col-sm-1>.text-right {
+			padding-top: 5px;
+		}
+
+		.col-sm-2 {
+			padding-right: 5px;
+			text-align: center;
+		}
+	</style>
 </head>
-<body>
-<div style="float: left; white-space: pre; line-height: 1; background: #BFEFFF; ">
-<h3>+ T E S T +</h3>
-</div>
+
+<body class="bg-light">
+	<div class="container">
+		<div class="text-center">
+			<h2>Квартплата</h2>
+			<p class="lead">Для просмотра других месяцев нажимайте стрелочки.</p>
+		</div>
+
+		<div class="col-md-12">
+			<hr>
+			<div class="row row-header">
+				<div class="col-sm-2"><input type="text" readonly class="form-control text-center" value="&lt;"></div>
+				<div class="col-sm-1">
+					<div class="text-right">Месяц</div>
+				</div>
+				<div class="col-sm-3"><input type="text" readonly class="form-control text-center" value="Июль"></div>
+				<div class="col-sm-1">
+					<div class="text-right">Год</div>
+				</div>
+				<div class="col-sm-3"><input type="text" readonly class="form-control text-center" value="2020"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control text-center" value="&gt;"></div>
+			</div>
+			<hr>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="table-header-content"></div>
+				</div>
+				<div class="col-sm-2">
+					<div class="table-header-content">Показания счетчика</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="table-header-content">Прошлые показания</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="table-header-content"><br>Разница</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="table-header-content"><br>К оплате</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Электричество">
+				</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="111111"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="222222"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="1234"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Вода горячая">
+				</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="111111"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="222222"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="1234"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Водоотвод (горяч.)">
+				</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="111111"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="222222"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="1234"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Вода холодная">
+				</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="111111"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="222222"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="1234"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Отопление">
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Домофон">
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="ОСББ">
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Вывоз мусора">
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Интернет">
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Общая сумма :">
+				</div>
+				<div class="col-sm-6"></div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="К оплате :">
+				</div>
+				<div class="col-sm-6">(2/3 от общей суммы, но 1/2 за Интернет)</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Баланс :">
+				</div>
+				<div class="col-sm-6">(остаток/долг с прошлого месяца)</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4"><input type="text" readonly class="form-control" value="Остаток :">
+				</div>
+				<div class="col-sm-6">(нужно доплатить или остаток)</div>
+				<div class="col-sm-2"><input type="text" readonly class="form-control" value="3.987"></div>
+			</div>
+		</div>
+
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+			<div class="row">
+				<div class="col-12 col-md">
+					<small class="d-block mb-3 text-muted">Copyrights &copy; 2020</small>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
+
 </html>
